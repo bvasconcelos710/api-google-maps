@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="assets/javascript/mapa.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Registre um evento acadêmico</h1>
+    </div>
+    <div id="container">
+        <div id="divform">
+            <div class="caixa">
+                <div class="form">
+                    <form action="/pagina-processa-dados-do-form" method="post">
+                        <div>
+                            <label for="descricao">
+                                <p id="descricao-label">Descrição:</p>
+                            </label>
+                            <input type="text" id="descricao" placeholder="insira a aqui" />
+                        </div>
+                        <div>
+                            <button type="button" onclick="salvar()">Salvar</button>
+                        </div>
+                        <div>
+                            <button type="button" onclick="listar()">Listar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+</body>
+
+</html>
